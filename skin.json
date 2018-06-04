@@ -1,0 +1,39 @@
+{
+	"manifest_version": 1,
+	"name": "Gaucho",
+	"version": "1.0",
+	"author": "[https://mediawiki.org/wiki/User:Sophivorus Felipe Schenone]",
+	"descriptionmsg": "gaucho-desc",
+	"type": "skin",
+	"license-name": "GPL-3.0-only",
+	"MessagesDirs": {
+		"Gaucho": [
+			"i18n"
+		]
+	},
+	"ValidSkinNames": {
+		"gaucho": "Gaucho"
+	},
+	"AutoloadClasses": {
+		"SkinGaucho": "Gaucho.php",
+		"GauchoTemplate": "Gaucho.php"
+	},
+	"ResourceModules": {
+		"skins.gaucho.styles": {
+			"styles": "Gaucho.css"
+		},
+		"skins.gaucho": {
+			"scripts": "Gaucho.js",
+			"dependencies": [
+				"oojs-ui"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Gaucho"
+	},
+	"Hooks": {
+		"BeforePageDisplay": "SkinGaucho::onBeforePageDisplay"
+	}
+}

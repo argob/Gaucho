@@ -1,0 +1,323 @@
+/**
+ * Site-wide elements
+ */
+body {
+	background: #f9f9f9;
+	font-family: Arial;
+	font-size: 14px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: blue;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0 .5em 0;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.6em;
+}
+h3 {
+	font-size: 1.4em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5, h6 {
+	font-size: 1em;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+pre {
+	white-space: pre-wrap;
+}
+fieldset {
+	border: 1px solid #aaa;
+	margin: 1em 0;
+}
+
+/**
+ * Header
+ */
+#header-wrapper {
+	border-bottom: 1px solid #aaa;
+}
+#header {
+	margin: auto;
+	max-width: 1000px;
+	padding: .5em;
+}
+#logo-wrapper {
+	display: inline-block;
+	width: 25%;
+}
+#logo {
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: inherit;
+	display: inline-block;
+	font-size: 2em;
+	padding-left: 1.5em;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 160px;
+	height: 30px;
+}
+#search-form-wrapper {
+	display: inline-block;
+	width: 50%;
+}
+#user-menu-wrapper {
+	display: inline-block;
+	text-align: right;
+	width: 25%;
+}
+#user-menu {
+	margin: 0;
+	padding: 0;
+}
+#user-menu li {
+	display: inline-block;
+	margin: 0 .5em;
+	vertical-align: top;
+}
+/*
+#user-menu {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#user-menu li {
+	line-height: 2em;
+	margin: 0;
+	padding: 0;
+}
+#user-menu a {
+	display: inline !important;
+	opacity: 1 !important;
+	top: 0 !important;
+	white-space: nowrap;
+	width: auto !important;
+}
+#user-menu a:before {
+	background-image: none !important;
+}
+#user-menu a:after {
+	background-image: none !important;
+}
+*/
+/**
+ * Title
+ */
+.mw-indicator {
+	float: right;
+}
+#contentSub {
+	font-size: small;
+	margin: 1em 0;
+}
+
+/**
+ * Actions
+ */
+#actions {
+	display: inline;
+	font-size: small;
+	font-weight: normal;
+	padding: 0;
+	text-transform: lowercase;
+	white-space: nowrap;	
+}
+#actions li {
+	display: inline;
+	margin-left: 1em;
+}
+.mw-editsection {
+	font-size: small;
+	font-weight: normal;
+}
+.mw-editsection a {
+	margin-left: 1em;
+}
+.mw-editsection-divider,
+.mw-editsection-bracket {
+	display: none;
+}
+
+/**
+ * Content
+ */
+#content-wrapper {
+	background: white;
+}
+#content {
+	line-height: 1.5;
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 1em;
+	padding-bottom: 5em;
+}
+.ve-ce-documentNode {
+	padding: 0 !important;
+}
+#mw-content-text ol,
+.ve-ui-surface ol {
+	margin: 0 0 0 2em;
+	padding: 0;
+}
+#mw-content-text ul,
+.ve-ui-surface ul {
+	margin: 0 0 0 2em;
+	padding: 0;
+}
+#mw-content-text pre,
+.ve-ui-surface pre {
+	background: #f9f9f9;
+	border: 1px solid #aaa;
+	padding: 20px;
+}
+
+/**
+ * Table of contents
+ */
+#toc {
+	background: #f9f9f9;
+	border: 1px solid #aaa;
+	display: inline-block;
+	padding: 1em;
+}
+#toc .toctoggle {
+	display: none; /* Hide it because it cannot be styled like the Edit section button */
+}
+#toc .tocnumber {
+	color: black;
+}
+#toc .toctext:hover {
+	text-decoration: underline;
+}
+#toc a:hover {
+	text-decoration: none;
+}
+#toc h2 {
+	display: inline;
+}
+#toc ul {
+	margin: 0;
+}
+#toc li {
+	list-style: none;
+}
+#filetoc {
+	display: none; /* Hide it per useless */
+}
+
+/**
+ * Thumbnails
+ */
+.thumb {
+	background: #f9f9f9;
+	border: 1px solid #aaa;
+}
+.thumb.tright {
+	margin: 0 0 10px 10px;
+}
+.thumb.tleft {
+	margin: 0 10px 10px 0;
+}
+.thumb .thumbinner {
+	padding: 10px;
+}
+.thumb .thumbcaption {
+	font-size: small;
+}
+
+/**
+ * Galleries
+ * 
+ * Galleries come with their own styling,
+ * these are overrides to make the galleries fit with the overall style of the skin
+ */
+.gallery {
+	margin: 0 !important;
+}
+.gallerytext {
+	font-size: small;
+	margin: 5px;
+	padding: 0;
+}
+.gallerytext p {
+	margin: 0;
+}
+
+/**
+ * Collapse button
+ *
+ * This button is prominent in Special:RecentChanges and Special:Watchlist
+ */
+.mw-collapsible-toggle {
+	margin-left: 1em;
+}
+.mw-collapsible-bracket {
+	display: none;
+}
+
+/**
+ * Categories
+ */
+#catlinks {
+	background: #f9f9f9;
+	border: 1px solid #aaa;
+	clear: both;
+	padding: 1em;
+}
+#catlinks ul {
+	margin: 0;
+}
+
+/**
+ * Footer
+ */
+#footer-wrapper {
+	border-top: 1px solid #aaa;
+	clear: both;
+	padding: 1em;
+}
+#footer {
+	margin: auto;
+	max-width: 1000px;
+}
+#footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#footer li {
+	margin: .7em 0;
+}
+#footer-bottom {
+	width: 640px;
+}
+#footer .footer-places {
+	list-style: none;
+	padding: 0;
+}
+#footer .footer-icons {
+	display: none;
+}
+#footer .footer-tools {
+	float: right;
+}
+#footer .footer-tools li {
+	margin-top: 0;
+}

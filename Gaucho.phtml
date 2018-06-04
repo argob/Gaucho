@@ -1,0 +1,76 @@
+<?php $this->html( 'headelement' ); ?>
+
+<div id="header-wrapper">
+	<div id="header">
+		<div id="logo-wrapper">
+
+			<a id="logo" href="<?= htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ); ?>" <?= Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ); ?> style="background-image: url(<?php global $wgLogo; echo $wgLogo; ?>)"><?php global $wgSitename; echo $wgSitename; ?></a>
+
+		</div><div id="search-form-wrapper">
+
+			<form id="search-form" action="<?php $this->text( 'wgScript' ); ?>">
+				<?php $this->searchInput(); ?>
+			</form>
+
+		</div><div id="user-menu-wrapper">
+			<ul id="user-menu">
+				<?php foreach ( $this->getUserMenu() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="content-wrapper">
+
+	<div id="content">
+
+		<?php $this->html( 'sitenotice' ); ?>
+
+		<?= $this->getIndicators(); ?>
+
+		<h1 id="firstHeading"><?php $this->html( 'title' ) ?>
+		<?php echo $this->getSkin()->getOutput()->getProperty( 'productPrice' ); ?>
+			<ul id="actions">
+				<?php foreach ( $this->getActions() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+			</ul>
+		</h1>
+
+		<?php if ( $this->data['subtitle'] ): ?>
+		<div id="contentSub"><?php $this->html( 'subtitle' ) ?></div>
+		<?php endif; ?>
+
+		<?php if ( $this->data['undelete'] ): ?>
+		<div id="undelete"><?php $this->html( 'undelete' ) ?></div>
+		<?php endif; ?>
+
+		<?php if ( $this->data['newtalk'] ): ?>
+		<div class="newtalk"><?php $this->html( 'newtalk' )  ?></div>
+		<?php endif; ?>
+
+		<?php $this->html( 'bodytext' ) ?>
+
+		<div class="printfooter"><?php $this->html( 'printfooter' ); ?></div>
+
+		<?php $this->html( 'catlinks' ); ?>
+
+		<?php $this->html( 'dataAfterContent' ); ?>
+
+		<?php $this->html( 'debughtml' ); ?>
+
+	</div>
+
+</div>
+
+<div id="footer-wrapper">
+	<div id="footer">
+		<ul class="footer-tools">
+			<?php foreach ( $this->getToolbox() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+		</ul>
+		<?= $this->getFooter(); ?>
+	</div>
+</div>
+
+<?php $this->printTrail(); ?>
+
+</body>
+</html>
