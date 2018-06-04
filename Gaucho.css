@@ -279,6 +279,7 @@ fieldset {
 	background: #f9f9f9;
 	border: 1px solid #aaa;
 	clear: both;
+	margin: 1em 0;
 	padding: 1em;
 }
 #catlinks ul {
