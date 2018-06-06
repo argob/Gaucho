@@ -262,6 +262,13 @@ fieldset {
 }
 
 /**
+ * Search results
+ */
+.searchresults {
+	margin: 1em 0;
+}
+
+/**
  * Collapse button
  *
  * This button is prominent in Special:RecentChanges and Special:Watchlist
