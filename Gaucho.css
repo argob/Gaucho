@@ -181,6 +181,10 @@ fieldset {
 	margin: 0 0 0 2em;
 	padding: 0;
 }
+#mw-content-text li,
+.ve-ui-surface li {
+	margin: .2em 0;
+}
 #mw-content-text pre,
 .ve-ui-surface pre {
 	background: #f9f9f9;
