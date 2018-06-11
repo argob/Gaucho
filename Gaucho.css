@@ -10,6 +10,7 @@
  */
 #pt-notifications-alert .mw-echo-notifications-badge:before,
 #pt-notifications-notice .mw-echo-notifications-badge:before {
+	padding: 0 1em;
 	top: 1030px;
 }
 
