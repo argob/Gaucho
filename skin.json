@@ -20,12 +20,18 @@
 	},
 	"ResourceModules": {
 		"skins.gaucho.styles": {
-			"styles": "Gaucho.css"
+			"styles": [
+				"Gaucho.css",
+				"poncho/css/poncho.min.css",
+				"poncho/css/roboto-fontface.css",
+				"bootstrap/css/bootstrap.min.css",
+				"fontawesome/css/fontawesome-all.min.css"
+			]
 		},
 		"skins.gaucho": {
-			"scripts": "Gaucho.js",
-			"dependencies": [
-				"oojs-ui"
+			"scripts": [
+				"Gaucho.js",
+				"bootstrap/js/bootstrap.min.js"
 			]
 		}
 	},

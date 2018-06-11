@@ -1,35 +1,43 @@
 <?php $this->html( 'headelement' ); ?>
 
-<div id="header-wrapper">
-	<div id="header">
-		<div id="logo-wrapper">
-
-			<a id="logo" href="<?= htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ); ?>" <?= Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ); ?> style="background-image: url(<?php global $wgLogo; echo $wgLogo; ?>)"><?php global $wgSitename; echo $wgSitename; ?></a>
-
-		</div><div id="search-form-wrapper">
-
-			<form id="search-form" action="<?php $this->text( 'wgScript' ); ?>">
-				<?php $this->searchInput(); ?>
-			</form>
-
-		</div><div id="user-menu-wrapper">
-			<ul id="user-menu">
-				<?php foreach ( $this->getUserMenu() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+<header>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<a class="navbar-brand" href="<?php $this->mainPageUrl(); ?>">
+				<img src="<?php $this->logoSrc(); ?>">
+				<h1><?php $this->siteName(); ?></h1>
+			</a>
+			<ul class="nav navbar-nav navbar-right">
+				<?php foreach ( $this->getNotifications() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-user"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<?php foreach ( $this->getUserMenu() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-bars"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">a</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
-	</div>
-</div>
+	</nav>
+</header>
 
-<div id="content-wrapper">
-
-	<div id="content">
+<main>
+	<div class="container">
 
 		<?php $this->html( 'sitenotice' ); ?>
 
-		<?= $this->getIndicators(); ?>
+		<?php echo $this->getIndicators(); ?>
 
 		<h1 id="firstHeading"><?php $this->html( 'title' ) ?>
-		<?php echo $this->getSkin()->getOutput()->getProperty( 'productPrice' ); ?>
 			<ul id="actions">
 				<?php foreach ( $this->getActions() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
 			</ul>
@@ -58,17 +66,22 @@
 		<?php $this->html( 'debughtml' ); ?>
 
 	</div>
+</main>
 
-</div>
-
-<div id="footer-wrapper">
-	<div id="footer">
-		<ul class="footer-tools">
-			<?php foreach ( $this->getToolbox() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
-		</ul>
-		<?= $this->getFooter(); ?>
+<footer class="main-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<ul>
+					<?php foreach ( $this->getToolbox() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+				</ul>
+			</div>
+			<div class="col-lg-6">
+				<?php echo $this->getFooter(); ?>
+			</div>
+		</div>
 	</div>
-</div>
+</footer>
 
 <?php $this->printTrail(); ?>
 

@@ -22,6 +22,29 @@ class SkinGaucho extends SkinTemplate {
 class GauchoTemplate extends BaseTemplate {
 
 	/**
+	 * Echo the logo src
+	 */
+	function logoSrc() {
+		global $wgLogo;
+		echo $wgLogo;
+	}
+
+	/**
+	 * Echo the site name
+	 */
+	function siteName() {
+		global $wgSitename;
+		echo $wgSitename;
+	}
+
+	/**
+	 * Echo the main page URL
+	 */
+	function mainPageUrl() {
+		echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] );
+	}
+
+	/**
 	 * Echo the search bar
 	 */
 	function searchInput() {
@@ -45,12 +68,8 @@ class GauchoTemplate extends BaseTemplate {
 	 */
 	function getUserMenu() {
 		$userMenu = $this->getPersonalTools();
-		unset( $userMenu['userpage'] );
-		unset( $userMenu['mytalk'] );
-		unset( $userMenu['mycontris'] );
-		unset( $userMenu['watchlist'] );
-		unset( $userMenu['anontalk'] );
-		unset( $userMenu['anoncontribs'] );
+		unset( $userMenu['notifications-alert'] );
+		unset( $userMenu['notifications-notice'] );
 		return $userMenu;
 	}
 
@@ -73,19 +92,16 @@ class GauchoTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Get the notifications alert of the Echo extension
+	 * Get the notifications of the Echo extension
 	 */
-	function getNotificationsAlert() {
-		$userLinks = $this->getPersonalTools();
-		return $userLinks['notifications-alert'];
-	}
-
-	/**
-	 * Get the notifications alert of the Echo extension
-	 */
-	function getNotificationsNotice() {
-		$userLinks = $this->getPersonalTools();
-		return $userLinks['notifications-notice'];
+	function getNotifications() {
+		$notifications = [];
+		$personalTools = $this->getPersonalTools();
+		if ( array_key_exists( 'notifications-alert', $personalTools ) ) {
+			$notifications['notifications-alert'] = $personalTools['notifications-alert'];
+			$notifications['notifications-notice'] = $personalTools['notifications-notice'];
+		}
+		return $notifications;
 	}
 
 	/**
