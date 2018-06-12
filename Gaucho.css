@@ -56,40 +56,6 @@
 }
 
 /**
- * Content
- */
-#content {
-	line-height: 1.5;
-	margin: 0 auto;
-	max-width: 1000px;
-	padding: 1em;
-	padding-bottom: 5em;
-}
-.ve-ce-documentNode {
-	padding: 0 !important;
-}
-#mw-content-text ol,
-.ve-ui-surface ol {
-	margin: 0 0 0 2em;
-	padding: 0;
-}
-#mw-content-text ul,
-.ve-ui-surface ul {
-	margin: 0 0 0 2em;
-	padding: 0;
-}
-#mw-content-text li,
-.ve-ui-surface li {
-	margin: .2em 0;
-}
-#mw-content-text pre,
-.ve-ui-surface pre {
-	background: #f9f9f9;
-	border: 1px solid #aaa;
-	padding: 20px;
-}
-
-/**
  * Table of contents
  */
 #toc {
