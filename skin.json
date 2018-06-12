@@ -1,7 +1,7 @@
 {
 	"manifest_version": 1,
 	"name": "Gaucho",
-	"version": "1.0",
+	"version": "1.0.1",
 	"author": "[https://mediawiki.org/wiki/User:Sophivorus Felipe Schenone]",
 	"descriptionmsg": "gaucho-desc",
 	"type": "skin",
@@ -21,11 +21,11 @@
 	"ResourceModules": {
 		"skins.gaucho.styles": {
 			"styles": [
-				"Gaucho.css",
-				"poncho/css/poncho.min.css",
-				"poncho/css/roboto-fontface.css",
+				"fontawesome/css/fontawesome-all.min.css",
 				"bootstrap/css/bootstrap.min.css",
-				"fontawesome/css/fontawesome-all.min.css"
+				"poncho/css/roboto-fontface.css",
+				"poncho/css/poncho.min.css",
+				"Gaucho.css"
 			]
 		},
 		"skins.gaucho": {
