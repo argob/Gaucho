@@ -56,6 +56,13 @@
 }
 
 /**
+ * Content
+ */
+.ve-ui-surface .ve-ce-documentNode {
+	padding: 0;
+}
+
+/**
  * Table of contents
  */
 #toc {
