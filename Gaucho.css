@@ -58,8 +58,8 @@
 /**
  * Content
  */
-.ve-ui-surface .ve-ce-documentNode {
-	padding: 0;
+.ve-ce-documentNode {
+	padding: 0 !important;
 }
 
 /**
