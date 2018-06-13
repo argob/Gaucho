@@ -18,6 +18,16 @@
 }
 
 /**
+ * Search form
+ */
+.navbar-nav .main-form {
+	padding: 13px;
+}
+.navbar-nav input {
+	height: 46px;
+}
+
+/**
  * Title
  */
 .mw-indicator {
