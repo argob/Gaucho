@@ -92,7 +92,7 @@
  */
 #toc {
 	background: #fff;
-	border: 1px solid #aaa;
+	border: 1px solid #ccc;
 	display: inline-block;
 	margin-top: 1em;
 	padding: 1em;
@@ -127,7 +127,7 @@
  */
 .thumb {
 	background: #f9f9f9;
-	border: 1px solid #aaa;
+	border: 1px solid #ccc;
 }
 .thumb.tright {
 	margin: 0 0 10px 10px;
@@ -184,7 +184,7 @@
  */
 #catlinks {
 	background: #fff;
-	border: 1px solid #aaa;
+	border: 1px solid #ccc;
 	clear: both;
 	margin: 2em 0;
 	padding: 1em;
