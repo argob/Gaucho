@@ -40,12 +40,16 @@
 #content h1, h2, h3, h4, h5, h6 {
 	margin: 1em 0 0.5em 0;
 }
+#content p {
+	font-size: inherit;
+}
 #content ul,
 #content ol {
 	margin: 0 0 0 2em;
 }
 #content li {
-	margin: .2em 0;
+	font-size: inherit;	
+	margin: .3em 0;
 }
 
 /**
@@ -54,7 +58,6 @@
 #actions {
 	display: inline;
 	font-size: small;
-	font-weight: normal;
 	padding: 0;
 	text-transform: lowercase;
 	white-space: nowrap;	
@@ -65,7 +68,6 @@
 }
 .mw-editsection {
 	font-size: small;
-	font-weight: normal;
 }
 .mw-editsection a {
 	margin-left: 1em;
@@ -174,7 +176,7 @@
 	background: #fff;
 	border: 1px solid #aaa;
 	clear: both;
-	margin: 1em 0;
+	margin: 2em 0;
 	padding: 1em;
 }
 #catlinks ul {
