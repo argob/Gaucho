@@ -29,6 +29,26 @@
 }
 
 /**
+ * Content
+ */
+#content {
+	padding: 2em 1em;
+}
+#content .ve-ce-documentNode {
+	padding: 0 !important;
+}
+#content h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0 0.5em 0;
+}
+#content ul,
+#content ol {
+	margin: 0 0 0 2em;
+}
+#content li {
+	margin: .2em 0;
+}
+
+/**
  * Actions
  */
 #actions {
@@ -56,17 +76,10 @@
 }
 
 /**
- * Content
- */
-.ve-ce-documentNode {
-	padding: 0 !important;
-}
-
-/**
  * Table of contents
  */
 #toc {
-	background: #f9f9f9;
+	background: #fff;
 	border: 1px solid #aaa;
 	display: inline-block;
 	margin-top: 1em;
@@ -174,7 +187,6 @@
 footer .footer-icons {
 	display: none;
 }
-footer #lastmod {
-	font-size: 16px;
-	padding: 6px 0;
+footer li {
+	font-size: inherit;
 }

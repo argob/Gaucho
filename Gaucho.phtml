@@ -17,16 +17,14 @@
 						<?php foreach ( $this->getUserMenu() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
 					</ul>
 				</li>
-<!--
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 						<i class="fa fa-bars"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">a</a></li>
+						<?php foreach ( $this->data['sidebar']['navigation'] as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
 					</ul>
 				</li>
--->
 			</ul>
 		</div>
 	</nav>
