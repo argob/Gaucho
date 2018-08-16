@@ -49,11 +49,11 @@
 
 		<?php echo $this->getIndicators(); ?>
 
-		<h1 id="firstHeading"><?php $this->html( 'title' ) ?>
-			<ul id="actions">
-				<?php foreach ( $this->getActions() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
-			</ul>
-		</h1>
+		<h1 id="firstHeading"><?php $this->html( 'title' ) ?></h1>
+
+		<ul id="actions">
+			<?php foreach ( $this->getActions() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+		</ul>
 
 		<?php if ( $this->data['subtitle'] ): ?>
 		<div id="contentSub"><?php $this->html( 'subtitle' ) ?></div>

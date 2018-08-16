@@ -30,7 +30,6 @@
 		},
 		"skins.gaucho": {
 			"scripts": [
-				"Gaucho.js",
 				"bootstrap/js/bootstrap.min.js"
 			]
 		}

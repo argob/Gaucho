@@ -30,6 +30,9 @@
 /**
  * Title
  */
+#firstHeading {
+	display: inline-block;
+}
 .mw-indicator {
 	float: right;
 }
