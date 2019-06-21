@@ -1,5 +1,5 @@
 {
-  "name": "gaucho",
+  "name": "ar-gaucho",
   "description": "Skin para [MediaWiki](https://www.mediawiki.org) que utiliza [Poncho](https://argob.github.io/poncho/).",
   "version": "1.0.0",
   "main": "Gruntfile.js",
